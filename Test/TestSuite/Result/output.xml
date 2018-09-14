@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180802 16:32:33.063" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/irinachemisova/eclipse-workspace/RobotFrameworkTest/Test/TestSuite/MercurySuite.robot" id="s1" name="MercurySuite">
+<test id="s1-t1" name="TestCase1: Login Invalid Credentials">
+<kw name="Open Mercury Website in Chrome and Maximize" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+<arg>browser=gc</arg>
+</arguments>
+<msg timestamp="20180802 16:32:33.216" level="INFO">Opening browser 'gc' to base url 'http://newtours.demoaut.com/'</msg>
+<status status="PASS" endtime="20180802 16:32:37.666" starttime="20180802 16:32:33.215"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180802 16:32:37.894" starttime="20180802 16:32:37.667"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Browser is Maximized</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:37.896" starttime="20180802 16:32:37.895"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:37.896" starttime="20180802 16:32:33.215"></status>
+</kw>
+<kw name="Verify the Home page title" library="Common">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:37.909" level="INFO">Page title is 'Welcome: Mercury Tours'.</msg>
+<status status="PASS" endtime="20180802 16:32:37.909" starttime="20180802 16:32:37.897"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Home Page Title Verified</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:37.910" starttime="20180802 16:32:37.910"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:37.911" starttime="20180802 16:32:37.897"></status>
+</kw>
+<kw name="Click on Sign-On Link" library="Keywords">
+<kw name="Get SignOn Xpath" library="Locators">
+<assign>
+<var>${signOn}</var>
+</assign>
+<msg timestamp="20180802 16:32:37.913" level="INFO">${signOn} = //a[contains(text(),'SIGN-ON')]</msg>
+<status status="PASS" endtime="20180802 16:32:37.913" starttime="20180802 16:32:37.912"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=${signOn}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:37.914" level="INFO">Clicking element 'xpath=//a[contains(text(),'SIGN-ON')]'.</msg>
+<status status="PASS" endtime="20180802 16:32:38.528" starttime="20180802 16:32:37.913"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Clicked on Signon link succesfully.</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:38.528" starttime="20180802 16:32:38.528"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:38.528" starttime="20180802 16:32:37.912"></status>
+</kw>
+<kw name="Verify SignOn Page title" library="Keywords">
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns title of current page.</doc>
+<assign>
+<var>${WindowTitle}</var>
+</assign>
+<msg timestamp="20180802 16:32:38.534" level="INFO">${WindowTitle} = Sign-on: Mercury Tours</msg>
+<status status="PASS" endtime="20180802 16:32:38.534" starttime="20180802 16:32:38.529"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${WindowTitle}</arg>
+<arg>Sign-on: Mercury Tours</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:38.535" starttime="20180802 16:32:38.534"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to</arg>
+<arg>:${Title}</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:38.535" starttime="20180802 16:32:38.535"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:38.535" starttime="20180802 16:32:38.529"></status>
+</kw>
+<kw name="Enter Invalid UserName" library="Keywords">
+<kw name="Get UserName" library="Locators">
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20180802 16:32:38.536" level="INFO">${a} = //input[@name='userName']</msg>
+<status status="PASS" endtime="20180802 16:32:38.536" starttime="20180802 16:32:38.536"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${a}</arg>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:38.537" level="INFO">Typing text 'Aditya' into text field '//input[@name='userName']'</msg>
+<status status="PASS" endtime="20180802 16:32:38.680" starttime="20180802 16:32:38.536"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered wrong username</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:38.681" starttime="20180802 16:32:38.680"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:38.681" starttime="20180802 16:32:38.536"></status>
+</kw>
+<kw name="Enter Invalid Password" library="Keywords">
+<kw name="Get Password" library="Locators">
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20180802 16:32:38.683" level="INFO">${a} = //input[@name='password']</msg>
+<status status="PASS" endtime="20180802 16:32:38.683" starttime="20180802 16:32:38.682"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${a}</arg>
+<arg>${Passsword}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:38.683" level="INFO">Typing text 'Test123' into text field '//input[@name='password']'</msg>
+<status status="PASS" endtime="20180802 16:32:38.792" starttime="20180802 16:32:38.683"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered wrong password</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:38.793" starttime="20180802 16:32:38.792"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:38.793" starttime="20180802 16:32:38.681"></status>
+</kw>
+<kw name="Click on Submit" library="Keywords">
+<kw name="Get Submit" library="Locators">
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20180802 16:32:38.794" level="INFO">${a} = //input[@name='login']</msg>
+<status status="PASS" endtime="20180802 16:32:38.794" starttime="20180802 16:32:38.794"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:38.794" level="INFO">Clicking element '//input[@name='login']'.</msg>
+<status status="PASS" endtime="20180802 16:32:40.141" starttime="20180802 16:32:38.794"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Clicking on Submit</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:40.142" starttime="20180802 16:32:40.141"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:40.142" starttime="20180802 16:32:38.793"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${timeout}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:43.144" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180802 16:32:43.144" starttime="20180802 16:32:40.143"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180802 16:32:43.230" starttime="20180802 16:32:43.145"></status>
+</kw>
+<doc>This is to verify invalid login Mercury Tours Home Page</doc>
+<tags>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" endtime="20180802 16:32:43.230" critical="yes" starttime="20180802 16:32:33.214"></status>
+</test>
+<test id="s1-t2" name="TestCase2: User Registration in Mercury Website">
+<kw name="Open Mercury Website in Chrome and Maximize" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+<arg>browser=gc</arg>
+</arguments>
+<msg timestamp="20180802 16:32:43.235" level="INFO">Opening browser 'gc' to base url 'http://newtours.demoaut.com/'</msg>
+<status status="PASS" endtime="20180802 16:32:46.991" starttime="20180802 16:32:43.235"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180802 16:32:47.235" starttime="20180802 16:32:46.992"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Browser is Maximized</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:47.237" starttime="20180802 16:32:47.236"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:47.237" starttime="20180802 16:32:43.234"></status>
+</kw>
+<kw name="Verify the Home page title" library="Common">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:47.250" level="INFO">Page title is 'Welcome: Mercury Tours'.</msg>
+<status status="PASS" endtime="20180802 16:32:47.250" starttime="20180802 16:32:47.239"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Home Page Title Verified</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:47.251" starttime="20180802 16:32:47.251"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:47.251" starttime="20180802 16:32:47.238"></status>
+</kw>
+<kw name="Click on Register link" library="Keywords">
+<kw name="Get RegisterLink Xpath" library="Locators">
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20180802 16:32:47.252" level="INFO">${a} = //a[contains(text(), 'REGISTER')]</msg>
+<status status="PASS" endtime="20180802 16:32:47.253" starttime="20180802 16:32:47.252"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:47.253" level="INFO">Clicking element '//a[contains(text(), 'REGISTER')]'.</msg>
+<status status="PASS" endtime="20180802 16:32:48.042" starttime="20180802 16:32:47.253"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Clicking on Register Link</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:48.043" starttime="20180802 16:32:48.043"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:48.043" starttime="20180802 16:32:47.252"></status>
+</kw>
+<kw name="Verify Registration Page" library="Keywords">
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns title of current page.</doc>
+<assign>
+<var>${WindowTitle}</var>
+</assign>
+<msg timestamp="20180802 16:32:48.050" level="INFO">${WindowTitle} = Register: Mercury Tours</msg>
+<status status="PASS" endtime="20180802 16:32:48.051" starttime="20180802 16:32:48.044"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${WindowTitle}</arg>
+<arg>Register: Mercury Tours</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:48.051" starttime="20180802 16:32:48.051"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>User Navigated to -</arg>
+<arg>${WindowTitle}</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:48.052" starttime="20180802 16:32:48.051"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${WindowTitle}</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:48.053" starttime="20180802 16:32:48.052"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:48.053" starttime="20180802 16:32:48.044"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${timeout}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:51.055" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180802 16:32:51.055" starttime="20180802 16:32:48.053"></status>
+</kw>
+<kw name="Provide user details" library="Keywords">
+<kw name="First Name" library="Locators">
+<assign>
+<var>${FirstName}</var>
+</assign>
+<msg timestamp="20180802 16:32:51.057" level="INFO">${FirstName} = //input[@name='firstName']</msg>
+<status status="PASS" endtime="20180802 16:32:51.057" starttime="20180802 16:32:51.057"></status>
+</kw>
+<kw name="Last Name" library="Locators">
+<assign>
+<var>${LastName}</var>
+</assign>
+<msg timestamp="20180802 16:32:51.058" level="INFO">${LastName} = //input[@name='lastName']</msg>
+<status status="PASS" endtime="20180802 16:32:51.058" starttime="20180802 16:32:51.058"></status>
+</kw>
+<kw name="Phone" library="Locators">
+<assign>
+<var>${phone}</var>
+</assign>
+<msg timestamp="20180802 16:32:51.059" level="INFO">${phone} = //input[@name='phone']</msg>
+<status status="PASS" endtime="20180802 16:32:51.059" starttime="20180802 16:32:51.058"></status>
+</kw>
+<kw name="User ID" library="Locators">
+<assign>
+<var>${userID}</var>
+</assign>
+<msg timestamp="20180802 16:32:51.060" level="INFO">${userID} = //input[@name='userName']</msg>
+<status status="PASS" endtime="20180802 16:32:51.060" starttime="20180802 16:32:51.059"></status>
+</kw>
+<kw name="Country" library="Locators">
+<assign>
+<var>${country}</var>
+</assign>
+<msg timestamp="20180802 16:32:51.060" level="INFO">${country} = //select[@name='country']</msg>
+<status status="PASS" endtime="20180802 16:32:51.061" starttime="20180802 16:32:51.060"></status>
+</kw>
+<kw name="User Name" library="Locators">
+<assign>
+<var>${userName}</var>
+</assign>
+<msg timestamp="20180802 16:32:51.061" level="INFO">${userName} = //input[@name='userName']</msg>
+<status status="PASS" endtime="20180802 16:32:51.061" starttime="20180802 16:32:51.061"></status>
+</kw>
+<kw name="Password" library="Locators">
+<assign>
+<var>${password}</var>
+</assign>
+<msg timestamp="20180802 16:32:51.062" level="INFO">${password} = //input[@name='password']</msg>
+<status status="PASS" endtime="20180802 16:32:51.062" starttime="20180802 16:32:51.062"></status>
+</kw>
+<kw name="Confirm Password" library="Locators">
+<assign>
+<var>${confirmPassword}</var>
+</assign>
+<msg timestamp="20180802 16:32:51.063" level="INFO">${confirmPassword} = //input[@name='confirmPassword']</msg>
+<status status="PASS" endtime="20180802 16:32:51.063" starttime="20180802 16:32:51.062"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FirstName}</arg>
+<arg>${U_FirstName}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:51.064" level="INFO">Typing text 'Aditya' into text field '//input[@name='firstName']'</msg>
+<status status="PASS" endtime="20180802 16:32:51.253" starttime="20180802 16:32:51.063"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${LastName}</arg>
+<arg>${U_LastName}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:51.255" level="INFO">Typing text 'Roy' into text field '//input[@name='lastName']'</msg>
+<status status="PASS" endtime="20180802 16:32:51.355" starttime="20180802 16:32:51.254"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${phone}</arg>
+<arg>${U_phone}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:51.356" level="INFO">Typing text '7501451160' into text field '//input[@name='phone']'</msg>
+<status status="PASS" endtime="20180802 16:32:51.503" starttime="20180802 16:32:51.355"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${userID}</arg>
+<arg>${U_userID}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:51.504" level="INFO">Typing text 'aditya.qa14@gmai.com' into text field '//input[@name='userName']'</msg>
+<status status="PASS" endtime="20180802 16:32:51.721" starttime="20180802 16:32:51.503"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${country}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:51.722" level="INFO">Clicking element '//select[@name='country']'.</msg>
+<status status="PASS" endtime="20180802 16:32:51.908" starttime="20180802 16:32:51.722"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${country}</arg>
+<arg>${U_country}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:51.910" level="INFO">Selecting label(s) 'INDIA' from list '//select[@name='country']'.</msg>
+<status status="PASS" endtime="20180802 16:32:52.208" starttime="20180802 16:32:51.909"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${userName}</arg>
+<arg>${U_userName}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:52.210" level="INFO">Typing text 'aditya.qa14@gmai.com' into text field '//input[@name='userName']'</msg>
+<status status="PASS" endtime="20180802 16:32:52.659" starttime="20180802 16:32:52.209"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${U_password}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:52.661" level="INFO">Typing text 'Test123' into text field '//input[@name='password']'</msg>
+<status status="PASS" endtime="20180802 16:32:52.784" starttime="20180802 16:32:52.660"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${confirmPassword}</arg>
+<arg>${U_confirmPassword}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:52.785" level="INFO">Typing text 'Test123' into text field '//input[@name='confirmPassword']'</msg>
+<status status="PASS" endtime="20180802 16:32:52.903" starttime="20180802 16:32:52.785"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered FirstName</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:52.903" starttime="20180802 16:32:52.903"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered LastName</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:52.904" starttime="20180802 16:32:52.904"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered Phone</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:52.905" starttime="20180802 16:32:52.905"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered userID</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:52.906" starttime="20180802 16:32:52.906"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered Country</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:52.907" starttime="20180802 16:32:52.907"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered UserName</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:52.908" starttime="20180802 16:32:52.908"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered Password</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:52.909" starttime="20180802 16:32:52.909"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Entered ConfirmPassword</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:52.910" starttime="20180802 16:32:52.909"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:52.910" starttime="20180802 16:32:51.056"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${timeout}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:55.912" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180802 16:32:55.912" starttime="20180802 16:32:52.911"></status>
+</kw>
+<kw name="Click on submit registration" library="Keywords">
+<kw name="Get Submit For Register" library="Locators">
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20180802 16:32:55.915" level="INFO">${a} = //input[@name='register']</msg>
+<status status="PASS" endtime="20180802 16:32:55.915" starttime="20180802 16:32:55.914"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<msg timestamp="20180802 16:32:55.916" level="INFO">Clicking element '//input[@name='register']'.</msg>
+<status status="PASS" endtime="20180802 16:32:58.575" starttime="20180802 16:32:55.915"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Submitted Registration</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:32:58.576" starttime="20180802 16:32:58.575"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:32:58.576" starttime="20180802 16:32:55.913"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180802 16:32:58.674" starttime="20180802 16:32:58.577"></status>
+</kw>
+<doc>This is to verify the Registration flow in Mercury Home Page</doc>
+<tags>
+<tag>sanity</tag>
+</tags>
+<status status="PASS" endtime="20180802 16:32:58.675" critical="yes" starttime="20180802 16:32:43.232"></status>
+</test>
+<test id="s1-t3" name="TestCase3: Booking flight and then SignOff">
+<kw name="Open Mercury Website in Chrome and Maximize" library="Common">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+<arg>browser=gc</arg>
+</arguments>
+<msg timestamp="20180802 16:32:58.682" level="INFO">Opening browser 'gc' to base url 'http://newtours.demoaut.com/'</msg>
+<status status="PASS" endtime="20180802 16:33:02.313" starttime="20180802 16:32:58.681"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180802 16:33:02.547" starttime="20180802 16:33:02.314"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Browser is Maximized</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:02.548" starttime="20180802 16:33:02.547"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:02.548" starttime="20180802 16:32:58.680"></status>
+</kw>
+<kw name="Verify the Home page title" library="Common">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>${title}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:02.556" level="INFO">Page title is 'Welcome: Mercury Tours'.</msg>
+<status status="PASS" endtime="20180802 16:33:02.556" starttime="20180802 16:33:02.549"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Home Page Title Verified</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:02.557" starttime="20180802 16:33:02.556"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:02.557" starttime="20180802 16:33:02.548"></status>
+</kw>
+<kw name="Click on Register link" library="Keywords">
+<kw name="Get RegisterLink Xpath" library="Locators">
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20180802 16:33:02.559" level="INFO">${a} = //a[contains(text(), 'REGISTER')]</msg>
+<status status="PASS" endtime="20180802 16:33:02.559" starttime="20180802 16:33:02.558"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:02.559" level="INFO">Clicking element '//a[contains(text(), 'REGISTER')]'.</msg>
+<status status="PASS" endtime="20180802 16:33:03.405" starttime="20180802 16:33:02.559"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Clicking on Register Link</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:03.406" starttime="20180802 16:33:03.405"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:03.406" starttime="20180802 16:33:02.558"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${timeout}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:06.410" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180802 16:33:06.410" starttime="20180802 16:33:03.407"></status>
+</kw>
+<kw name="Click on submit registration" library="Keywords">
+<kw name="Get Submit For Register" library="Locators">
+<assign>
+<var>${a}</var>
+</assign>
+<msg timestamp="20180802 16:33:06.412" level="INFO">${a} = //input[@name='register']</msg>
+<status status="PASS" endtime="20180802 16:33:06.412" starttime="20180802 16:33:06.411"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${a}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:06.413" level="INFO">Clicking element '//input[@name='register']'.</msg>
+<status status="PASS" endtime="20180802 16:33:10.960" starttime="20180802 16:33:06.412"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Submitted Registration</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:10.961" starttime="20180802 16:33:10.960"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:10.961" starttime="20180802 16:33:06.411"></status>
+</kw>
+<kw name="Goto Flight Booking section" library="Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Flight_Xpath}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:10.962" level="INFO">Clicking element '//a[contains(text(), 'Flights')]'.</msg>
+<status status="PASS" endtime="20180802 16:33:11.791" starttime="20180802 16:33:10.962"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180802 16:33:13.793" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180802 16:33:13.793" starttime="20180802 16:33:11.791"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:13.794" starttime="20180802 16:33:10.962"></status>
+</kw>
+<kw name="Check the Booking Page" library="Keywords">
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns title of current page.</doc>
+<assign>
+<var>${WindowTitle}</var>
+</assign>
+<msg timestamp="20180802 16:33:13.800" level="INFO">${WindowTitle} = Find a Flight: Mercury Tours:</msg>
+<status status="PASS" endtime="20180802 16:33:13.800" starttime="20180802 16:33:13.795"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${WindowTitle}</arg>
+<arg>Find a Flight: Mercury Tours:</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:13.801" starttime="20180802 16:33:13.800"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to :</arg>
+<arg>${WindowTitle}</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:13.801" starttime="20180802 16:33:13.801"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:13.802" starttime="20180802 16:33:13.794"></status>
+</kw>
+<kw name="Provide user necessary details and continue" library="Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Oneway_Xpath}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:13.803" level="INFO">Clicking element '//input[@value='oneway']'.</msg>
+<status status="PASS" endtime="20180802 16:33:13.873" starttime="20180802 16:33:13.803"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Passenger_X}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:13.873" level="INFO">Clicking element '//select[@name='passCount']'.</msg>
+<status status="PASS" endtime="20180802 16:33:13.998" starttime="20180802 16:33:13.873"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${Passenger_X}</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180802 16:33:13.999" level="INFO">Selecting label(s) '1' from list '//select[@name='passCount']'.</msg>
+<status status="PASS" endtime="20180802 16:33:14.065" starttime="20180802 16:33:13.998"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${From_X}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:14.066" level="INFO">Clicking element '//select[@name='fromPort']'.</msg>
+<status status="PASS" endtime="20180802 16:33:14.424" starttime="20180802 16:33:14.066"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${From_X}</arg>
+<arg>London</arg>
+</arguments>
+<msg timestamp="20180802 16:33:14.424" level="INFO">Selecting label(s) 'London' from list '//select[@name='fromPort']'.</msg>
+<status status="PASS" endtime="20180802 16:33:14.794" starttime="20180802 16:33:14.424"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${To_X}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:14.794" level="INFO">Clicking element '//select[@name='toPort']'.</msg>
+<status status="PASS" endtime="20180802 16:33:15.124" starttime="20180802 16:33:14.794"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>${To_X}</arg>
+<arg>Paris</arg>
+</arguments>
+<msg timestamp="20180802 16:33:15.125" level="INFO">Selecting label(s) 'Paris' from list '//select[@name='toPort']'.</msg>
+<status status="PASS" endtime="20180802 16:33:15.478" starttime="20180802 16:33:15.124"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Class_X}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:15.479" level="INFO">Clicking element '//input[@type='radio'][@value='Business']'.</msg>
+<status status="PASS" endtime="20180802 16:33:15.793" starttime="20180802 16:33:15.478"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Continue_X}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:15.794" level="INFO">Clicking element '//input[@name='findFlights']'.</msg>
+<status status="PASS" endtime="20180802 16:33:16.571" starttime="20180802 16:33:15.794"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180802 16:33:18.572" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180802 16:33:18.573" starttime="20180802 16:33:16.571"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:18.573" starttime="20180802 16:33:13.802"></status>
+</kw>
+<kw name="Select Available flights and continue" library="Keywords">
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns title of current page.</doc>
+<assign>
+<var>${WindowTitle}</var>
+</assign>
+<msg timestamp="20180802 16:33:18.583" level="INFO">${WindowTitle} = Select a Flight: Mercury Tours</msg>
+<status status="PASS" endtime="20180802 16:33:18.583" starttime="20180802 16:33:18.575"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${WindowTitle}</arg>
+<arg>Select a Flight: Mercury Tours</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:18.584" starttime="20180802 16:33:18.584"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to :</arg>
+<arg>${WindowTitle}</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:18.585" starttime="20180802 16:33:18.585"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Continue2_X}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:18.586" level="INFO">Clicking element '//input[@name='reserveFlights']'.</msg>
+<status status="PASS" endtime="20180802 16:33:19.561" starttime="20180802 16:33:18.586"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:19.561" starttime="20180802 16:33:18.574"></status>
+</kw>
+<kw name="Provice payment details and secure booking" library="Keywords">
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns title of current page.</doc>
+<assign>
+<var>${WindowTitle}</var>
+</assign>
+<msg timestamp="20180802 16:33:19.567" level="INFO">${WindowTitle} = Book a Flight: Mercury Tours</msg>
+<status status="PASS" endtime="20180802 16:33:19.568" starttime="20180802 16:33:19.562"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${WindowTitle}</arg>
+<arg>Book a Flight: Mercury Tours</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:19.568" starttime="20180802 16:33:19.568"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to :</arg>
+<arg>${WindowTitle}</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:19.569" starttime="20180802 16:33:19.568"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Submit2_X}</arg>
+</arguments>
+<msg timestamp="20180802 16:33:19.569" level="INFO">Clicking element '//input[@name='buyFlights']'.</msg>
+<status status="PASS" endtime="20180802 16:33:20.510" starttime="20180802 16:33:19.569"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:20.510" starttime="20180802 16:33:19.561"></status>
+</kw>
+<kw name="Check confirmation page and bookind ID" library="Keywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180802 16:33:22.513" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180802 16:33:22.513" starttime="20180802 16:33:20.511"></status>
+</kw>
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns title of current page.</doc>
+<assign>
+<var>${WindowTitle}</var>
+</assign>
+<msg timestamp="20180802 16:33:22.522" level="INFO">${WindowTitle} = Flight Confirmation: Mercury Tours</msg>
+<status status="PASS" endtime="20180802 16:33:22.522" starttime="20180802 16:33:22.513"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${WindowTitle}</arg>
+<arg>Flight Confirmation: Mercury Tours</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:22.524" starttime="20180802 16:33:22.523"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigated to :</arg>
+<arg>${WindowTitle}</arg>
+</arguments>
+<status status="PASS" endtime="20180802 16:33:22.524" starttime="20180802 16:33:22.524"></status>
+</kw>
+<status status="PASS" endtime="20180802 16:33:22.525" starttime="20180802 16:33:20.510"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180802 16:33:22.607" starttime="20180802 16:33:22.526"></status>
+</kw>
+<doc>This is to verify the flight booking flow in Mercury Home Page after Registration</doc>
+<tags>
+<tag>Regression</tag>
+</tags>
+<status status="PASS" endtime="20180802 16:33:22.607" critical="yes" starttime="20180802 16:32:58.676"></status>
+</test>
+<doc>Testing MercuryTours Webdite</doc>
+<status status="PASS" endtime="20180802 16:33:22.609" starttime="20180802 16:32:33.068"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Regression</stat>
+<stat fail="0" pass="1">sanity</stat>
+<stat fail="0" pass="1">smoke</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="MercurySuite" pass="3">MercurySuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

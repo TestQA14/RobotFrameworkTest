@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfiguration>
+    <configVersion>2</configVersion>
+    <relativeTo>WORKSPACE</relativeTo>
+    <referencedLibrary type="PYTHON" name="Selenium2Library" path="/Library/Python/2.7/site-packages"/>
+    <referencedLibrary type="PYTHON" name="Elements" path="RobotFrameworkTest/Test/Locators"/>
+    <referencedLibrary type="PYTHON" name="Variables" path="RobotFrameworkTest/Test/Variable"/>
+    <referencedLibrary type="PYTHON" name="Locators" path="RobotFrameworkTest/Test/Locators"/>
+    <referencedLibrary type="PYTHON" name="Locators.Locator" path="RobotFrameworkTest/Test"/>
+    <referencedLibrary type="PYTHON" name="ExecutionTimeChecker" path="RobotFrameworkTest/Test/TestSuite"/>
+    <pythonpath/>
+    <classpath/>
+    <variableFiles path="RobotFrameworkTest/Test/Variable/Variables.py"/>
+    <excludedForValidation/>
+    <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
+    <validatedFileMaxSize>1024</validatedFileMaxSize>
+    <isReferencedLibrariesAutoReloadEnabled>true</isReferencedLibrariesAutoReloadEnabled>
+    <isReferencedLibrariesAutoDiscoveringEnabled>true</isReferencedLibrariesAutoDiscoveringEnabled>
+    <isLibrariesAutoDiscoveringSummaryWindowEnabled>false</isLibrariesAutoDiscoveringSummaryWindowEnabled>
+</projectConfiguration>
